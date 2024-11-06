@@ -1,15 +1,16 @@
 import { Component, Input } from '@angular/core';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-food-item',
   standalone: true,
-  imports: [],
+  imports: [RouterModule],
   templateUrl: './food-item.component.html',
   styleUrl: './food-item.component.css'
 })
 export class FoodItemComponent {
+  @Input() firstId!: string;
+  @Input() secondId!: string;
     @Input() firstImageUrl!: string;
-  @Input() firstName!: string;
   @Input() secondImageUrl!: string;
-  @Input() secondName!: string;
 }

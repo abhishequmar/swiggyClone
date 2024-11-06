@@ -1,0 +1,25 @@
+<div class="pl-[10%] pr-[10%]">
+  <button (click)="scrollLeft(scrollContainer)" class=" bg-white p-4 rounded-full shadow-md hover:bg-gray-100">
+      ←
+    </button>
+    <!-- Right Scroll Button -->
+    <button (click)="scrollRight(scrollContainer)" class=" bg-white p-4 rounded-full shadow-md hover:bg-gray-100">
+      →
+    </button>
+  <h2 class="text-2xl font-semibold text-gray-800 text-left mb-6">Shop Groceries on Instamart</h2>
+
+  <div class="relative flex items-center">
+    <!-- Left Scroll Button -->
+    
+
+    <!-- Scrollable Food Items Container -->
+    <div #scrollContainer class=" flex space-x-6 overflow-x-auto px-8 scroll-smooth">
+      <app-grocery-card
+        *ngFor="let grocery of groceryItems"
+        [imageUrl]="grocery.imageUrl">
+      </app-grocery-card>
+    </div>
+
+    
+  </div>
+</div>

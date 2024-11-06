@@ -1,0 +1,41 @@
+<div class="container mx-auto px-4 w-[100%]">
+  <!-- Food Delivery Section -->
+  <div class="my-8 w-[90%] pl-[10%]">
+    <h2 class="text-2xl font-bold text-center mb-4">Cities with food delivery</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 gap-x-4">
+      <ng-container *ngFor="let city of foodCities; let i = index">
+        <div *ngIf="showMoreFood || i < 8" class="flex justify-center">
+          <button class="bg-white border border-gray-300 rounded-lg px-4 py-2 hover:bg-gray-100">
+            {{ city }}
+          </button>
+        </div>
+      </ng-container>
+      <!-- Show More / Show Less button -->
+      <div class="flex justify-center" *ngIf="foodCities.length > 8">
+        <button (click)="toggleShowMore('food')" class="text-teal-500 font-semibold hover:underline">
+          {{ showMoreFood ? 'Show Less' : 'Show More' }}
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Grocery Delivery Section -->
+  <div class="my-8 w-[90%] pl-[10%] self-center">
+    <h2 class="text-2xl font-bold text-center mb-4">Cities with grocery delivery</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 gap-x-4">
+      <ng-container *ngFor="let city of groceryCities; let i = index">
+        <div *ngIf="showMoreGrocery || i < 8" class="flex justify-center">
+          <button class="bg-white border border-gray-300 rounded-lg px-4 py-2 hover:bg-gray-100">
+            {{ city }}
+          </button>
+        </div>
+      </ng-container>
+      <!-- Show More / Show Less button -->
+      <div class="flex justify-center" *ngIf="groceryCities.length > 8">
+        <button (click)="toggleShowMore('grocery')" class="text-teal-500 font-semibold hover:underline">
+          {{ showMoreGrocery ? 'Show Less' : 'Show More' }}
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
