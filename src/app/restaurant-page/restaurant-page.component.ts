@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { MenuItemCardComponent } from '../menu-item-card/menu-item-card.component';
+import { MenuItemCardComponent } from './menu-item-card/menu-item-card.component';
 
 @Component({
   selector: 'app-restaurant-page',

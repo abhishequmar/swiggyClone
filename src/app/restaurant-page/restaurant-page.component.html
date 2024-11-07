@@ -47,13 +47,17 @@
 
   <!-- Menu Section -->
   <h2 class="text-2xl font-semibold text-gray-800 mt-8">Menu</h2>
-  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-4">
-    <app-menu-item-card
-      *ngFor="let menuItem of menuItems"
-      [menuItem]="menuItem"
-      (addToFavorites)="onAddToFavorites(menuItem)"
-      (addToCart)="onAddToCart(menuItem)">
-    </app-menu-item-card>
-  </div>
+  <div *ngFor="let item of menuItems" class="mb-4">
+  <app-menu-item-card
+    [name]="item.name"
+    [price]="item.price"
+    [rating]="item.rating"
+    [reviews]="item.reviews"
+    [description]="item.description"
+    [imageUrl]="item.imageUrl"
+    [isBestseller]="item.isBestseller">
+  </app-menu-item-card>
+</div>
+
 </div>
 
