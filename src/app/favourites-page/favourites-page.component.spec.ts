@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SignInModalComponent } from './sign-in-modal.component';
+import { FavouritesPageComponent } from './favourites-page.component';
 
-describe('SignInModalComponent', () => {
-  let component: SignInModalComponent;
-  let fixture: ComponentFixture<SignInModalComponent>;
+describe('FavouritesPageComponent', () => {
+  let component: FavouritesPageComponent;
+  let fixture: ComponentFixture<FavouritesPageComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [SignInModalComponent]
+      imports: [FavouritesPageComponent]
     })
     .compileComponents();
     
-    fixture = TestBed.createComponent(SignInModalComponent);
+    fixture = TestBed.createComponent(FavouritesPageComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

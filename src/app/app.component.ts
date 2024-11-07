@@ -9,7 +9,6 @@ import { RestaurantSectionComponent } from './restaurant-section/restaurant-sect
 import { DeliverySectionComponent } from './delivery-section/delivery-section.component';
 import { FooterComponent } from './footer/footer.component';
 import { HttpClientModule } from '@angular/common/http';
-import { SignInModalComponent } from './sign-in-modal/sign-in-modal.component';
 import { RestaurantPageComponent } from './restaurant-page/restaurant-page.component';
 import { CommonModule } from '@angular/common';
 import { HomePageComponent } from './home-page/home-page.component';
@@ -28,7 +27,6 @@ import { HomePageComponent } from './home-page/home-page.component';
             RestaurantSectionComponent,
             DeliverySectionComponent,
             FooterComponent,
-            SignInModalComponent,
             RestaurantPageComponent,
             HttpClientModule,
             CommonModule,

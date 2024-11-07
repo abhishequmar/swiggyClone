@@ -12,7 +12,7 @@
       </ng-container>
       <!-- Show More / Show Less button -->
       <div class="flex justify-center" *ngIf="foodCities.length > 8">
-        <button (click)="toggleShowMore('food')" class="text-teal-500 font-semibold hover:underline">
+        <button (click)="toggleShowMore('food')" class="text-[#FF5200] font-semibold hover:underline border-gray-300 rounded-lg px-4 py-2 hover:bg-gray-100">
           {{ showMoreFood ? 'Show Less' : 'Show More' }}
         </button>
       </div>
@@ -32,7 +32,7 @@
       </ng-container>
       <!-- Show More / Show Less button -->
       <div class="flex justify-center" *ngIf="groceryCities.length > 8">
-        <button (click)="toggleShowMore('grocery')" class="text-teal-500 font-semibold hover:underline">
+        <button (click)="toggleShowMore('grocery')" class="text-[#FF5200] font-semibold hover:underline border-gray-300 rounded-lg px-4 py-2 hover:bg-gray-100">
           {{ showMoreGrocery ? 'Show Less' : 'Show More' }}
         </button>
       </div>

@@ -7,6 +7,7 @@ import { GrocerySectionComponent } from '../grocery-section/grocery-section.comp
 import { RestaurantSectionComponent } from '../restaurant-section/restaurant-section.component';
 import { DeliverySectionComponent } from '../delivery-section/delivery-section.component';
 import { FooterComponent } from '../footer/footer.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @Component({
   selector: 'app-home-page',
@@ -18,7 +19,8 @@ import { FooterComponent } from '../footer/footer.component';
             GrocerySectionComponent,
             RestaurantSectionComponent,
             DeliverySectionComponent,
-            FooterComponent
+            FooterComponent,
+            HttpClientModule
   ],
   templateUrl: './home-page.component.html',
   styleUrl: './home-page.component.css'

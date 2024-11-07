@@ -1,0 +1,114 @@
+<div class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-4">
+  <div *ngFor="let item of items" class="flex items-center p-4 border-b border-gray-200">
+    <div class="flex items-center space-x-4">
+      <img [src]="item.imageUrl" alt="{{ item.name }}" class="h-24 w-24 rounded-lg object-cover" />
+
+      <div class="flex flex-col">
+        <!-- Name and Price -->
+        <div class="text-lg font-bold">{{ item.name }}</div>
+        <div class="text-green-600 font-medium">₹{{ item.price }}</div>
+
+        
+      </div>
+    </div>
+    <!-- Quantity Display -->
+        <div class="flex items-center space-x-2 mt-2">
+          <button
+            (click)="decreaseQuantity(item)"
+            class="bg-gray-200 text-gray-600 rounded-full p-2"
+          >
+            -
+          </button>
+          <span class="text-lg">{{ item.quantity }}</span>
+          <button
+            (click)="increaseQuantity(item)"
+            class="bg-gray-200 text-gray-600 rounded-full p-2"
+          >
+            +
+          </button>
+        </div>
+
+    <!-- Remove Item Button -->
+    <!-- Remove Item Button (with Custom SVG Icon) -->
+<!-- Remove Item Button (with Custom Red SVG Icon) -->
+<button
+  (click)="removeItem(item)"
+  class="ml-auto hover:text-red-800"
+  aria-label="Remove Item"
+>
+  <!-- Custom Red SVG Icon -->
+  <svg width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#FF0000" stroke-width="2">
+    <rect x="20" y="24" width="24" height="32" rx="2" />
+    <line x1="26" y1="28" x2="26" y2="52" />
+    <line x1="32" y1="28" x2="32" y2="52" />
+    <line x1="38" y1="28" x2="38" y2="52" />
+    <line x1="16" y1="18" x2="48" y2="18" />
+    <line x1="28" y1="14" x2="36" y2="14" />
+  </svg>
+</button>
+
+
+  </div>
+</div>
+
+<!-- Place Order Button -->
+<button
+  (click)="openModal()"
+  *ngIf="items.length > 0"
+  class="mt-6 px-6 py-3 bg-[#FF5200] text-white rounded-full hover:bg-orange-700 focus:outline-none"
+>
+  Place Order
+</button>
+
+<!-- Order Modal -->
+<div *ngIf="isModalOpen" class="fixed inset-0 flex items-center justify-center bg-gray-500 bg-opacity-50">
+  <div class="bg-white p-8 rounded-lg shadow-lg w-96 max-w-full">
+    <h2 class="text-xl font-semibold mb-4">Review Your Order</h2>
+    
+    <!-- Item List in Modal with Scroll -->
+    <div class="max-h-60 overflow-y-auto space-y-4 mb-6">
+      <div *ngFor="let item of items" class="flex justify-between items-center">
+        <div class="flex items-center space-x-2">
+          <div>
+            <div class="font-bold">{{ item.name }}</div>
+            <div class="text-sm text-gray-500">₹{{ item.price }}</div>
+          </div>
+        </div>
+
+        <!-- Show Quantity -->
+        <div class="text-lg font-semibold">
+          Quantity: {{ item.quantity }}
+        </div>
+      </div>
+    </div>
+
+    <!-- Total Price with GST -->
+    <div class="flex justify-between font-semibold mb-4">
+      <div>Total (Before GST):</div>
+      <div>₹{{ totalPriceBeforeGST() }}</div>
+    </div>
+    <div class="flex justify-between font-semibold mb-6">
+      <div>GST (18%):</div>
+      <div>₹{{ gstAmount() }}</div>
+    </div>
+    <div class="flex justify-between font-semibold mb-6">
+      <div>Total (After GST):</div>
+      <div>₹{{ totalPriceAfterGST() }}</div>
+    </div>
+
+    <div class="flex justify-between">
+      <button
+        (click)="closeModal()"
+        class="px-4 py-2 bg-gray-300 text-gray-700 rounded-md hover:bg-gray-400"
+      >
+        Cancel
+      </button>
+      <button
+        (click)="confirmOrder()"
+        class="px-4 py-2 bg-[#FF5200] text-white rounded-md hover:bg-blue-700"
+      >
+        Confirm Order
+      </button>
+    </div>
+  </div>
+</div>

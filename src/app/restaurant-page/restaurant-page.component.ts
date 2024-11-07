@@ -133,47 +133,83 @@ menuList = [
   {
     restaurantId: '0',
     items: [
-      { name: "Pasta Primavera", description: "Fresh pasta with seasonal vegetables", price: "₹350", imageUrl: "assets/menu/pasta_primavera.jpg" },
-      { name: "Margherita Pizza", description: "Classic pizza with tomato and mozzarella", price: "₹500", imageUrl: "assets/menu/margherita_pizza.jpg" },
-      { name: "Caesar Salad", description: "Romaine lettuce, croutons, and Parmesan cheese", price: "₹250", imageUrl: "assets/menu/caesar_salad.jpg" }
+      { name: "Pasta Primavera", description: "Fresh pasta with seasonal vegetables", price: "₹350", imageUrl: "assets/pasta_primavera.jpg" },
+      { name: "Margherita Pizza", description: "Classic pizza with tomato and mozzarella", price: "₹500", imageUrl: "assets/margherita_pizza.jfif" },
+      { name: "Caesar Salad", description: "Romaine lettuce, croutons, and Parmesan cheese", price: "₹250", imageUrl: "assets/caesar_salad.jfif" }
     ]
   },
   // Menu for restaurantId '1'
   {
     restaurantId: '1',
     items: [
-      { name: "Grilled Salmon", description: "Salmon with a lemon butter sauce", price: "₹750", imageUrl: "assets/menu/grilled_salmon.jpg" },
-      { name: "Lamb Chops", description: "Herb-crusted lamb chops with mashed potatoes", price: "₹900", imageUrl: "assets/menu/lamb_chops.jpg" },
-      { name: "Greek Salad", description: "Fresh vegetables, olives, and feta cheese", price: "₹300", imageUrl: "assets/menu/greek_salad.jpg" }
+      { name: "Grilled Salmon", description: "Salmon with a lemon butter sauce", price: 750, imageUrl: "assets/grilled_salmon.jfif" },
+      { name: "Lamb Chops", description: "Herb-crusted lamb chops with mashed potatoes", price: 900, imageUrl: "assets/lamb_chops.jfif" },
+      { name: "Greek Salad", description: "Fresh vegetables, olives, and feta cheese", price: 300, imageUrl: "assets/greek_salad.jfif" }
     ]
   },
   // Menu for restaurantId '2'
   {
     restaurantId: '2',
     items: [
-      { name: "Butter Chicken", description: "Classic butter chicken with naan", price: "₹400", imageUrl: "assets/menu/butter_chicken.jpg" },
-      { name: "Paneer Tikka", description: "Grilled paneer with spices", price: "₹350", imageUrl: "assets/menu/paneer_tikka.jpg" },
-      { name: "Gulab Jamun", description: "Sweet Indian dessert", price: "₹100", imageUrl: "assets/menu/gulab_jamun.jpg" }
+      { name: "Butter Chicken", description: "Classic butter chicken with naan", price:400, imageUrl: "assets/butter_chicken.jfif" },
+      { name: "Paneer Tikka", description: "Grilled paneer with spices", price:350, imageUrl: "assets/paneer_tikka.jfif" },
+      { name: "Gulab Jamun", description: "Sweet Indian dessert", price:100, imageUrl: "assets/gulab_jamun.jfif" }
     ]
   },
   // Menu for restaurantId '3'
   {
     restaurantId: '3',
     items: [
-      { name: "Sushi Platter", description: "Assortment of fresh sushi", price: "₹1200", imageUrl: "assets/menu/sushi_platter.jpg" },
-      { name: "Tempura", description: "Crispy fried vegetables and shrimp", price: "₹600", imageUrl: "assets/menu/tempura.jpg" },
-      { name: "Miso Soup", description: "Traditional Japanese soup", price: "₹150", imageUrl: "assets/menu/miso_soup.jpg" }
+      { name: "Sushi Platter", description: "Assortment of fresh sushi", price:1200, imageUrl: "assets/sushi_platter.jfif" },
+      { name: "Tempura", description: "Crispy fried vegetables and shrimp", price: 600, imageUrl: "assets/tempura.jfif" },
+      { name: "Miso Soup", description: "Traditional Japanese soup", price: 150, imageUrl: "assets/miso_soup.jfif" }
     ]
   },
   // Menu for restaurantId '4'
   {
     restaurantId: '4',
     items: [
-      { name: "Biryani", description: "Spicy rice dish with chicken or mutton", price: "₹400", imageUrl: "assets/menu/biryani.jpg" },
-      { name: "Tandoori Chicken", description: "Charcoal-grilled marinated chicken", price: "₹500", imageUrl: "assets/menu/tandoori_chicken.jpg" },
-      { name: "Mango Lassi", description: "Refreshing yogurt drink with mango", price: "₹120", imageUrl: "assets/menu/mango_lassi.jpg" }
+      { name: "Biryani", description: "Spicy rice dish with chicken or mutton", price: 400, imageUrl: "assets/biryani.jfif" },
+      { name: "Tandoori Chicken", description: "Charcoal-grilled marinated chicken", price: 500, imageUrl: "assets/tandoori_chicken.jfif" },
+      { name: "Mango Lassi", description: "Refreshing yogurt drink with mango", price: 120, imageUrl: "assets/mango_lassi.jfif" }
     ]
-  }
+  },
+  // Menu for restaurantId '0'
+  {
+    restaurantId: '5',
+    items: [
+      { name: "Pasta Primavera", description: "Fresh pasta with seasonal vegetables", price: "₹350", imageUrl: "assets/pasta_primavera.jpg" },
+      { name: "Margherita Pizza", description: "Classic pizza with tomato and mozzarella", price: "₹500", imageUrl: "assets/margherita_pizza.jfif" },
+      { name: "Caesar Salad", description: "Romaine lettuce, croutons, and Parmesan cheese", price: "₹250", imageUrl: "assets/caesar_salad.jfif" }
+    ]
+  },
+  // Menu for restaurantId '1'
+  {
+    restaurantId: '6',
+    items: [
+      { name: "Grilled Salmon", description: "Salmon with a lemon butter sauce", price: 750, imageUrl: "assets/grilled_salmon.jfif" },
+      { name: "Lamb Chops", description: "Herb-crusted lamb chops with mashed potatoes", price: 900, imageUrl: "assets/lamb_chops.jfif" },
+      { name: "Greek Salad", description: "Fresh vegetables, olives, and feta cheese", price: 300, imageUrl: "assets/greek_salad.jfif" }
+    ]
+  },
+  // Menu for restaurantId '2'
+  {
+    restaurantId: '7',
+    items: [
+      { name: "Butter Chicken", description: "Classic butter chicken with naan", price:400, imageUrl: "assets/butter_chicken.jfif" },
+      { name: "Paneer Tikka", description: "Grilled paneer with spices", price:350, imageUrl: "assets/paneer_tikka.jfif" },
+      { name: "Gulab Jamun", description: "Sweet Indian dessert", price:100, imageUrl: "assets/gulab_jamun.jfif" }
+    ]
+  },
+  // Menu for restaurantId '3'
+  {
+    restaurantId: '8',
+    items: [
+      { name: "Sushi Platter", description: "Assortment of fresh sushi", price:1200, imageUrl: "assets/sushi_platter.jfif" },
+      { name: "Tempura", description: "Crispy fried vegetables and shrimp", price: 600, imageUrl: "assets/tempura.jfif" },
+      { name: "Miso Soup", description: "Traditional Japanese soup", price: 150, imageUrl: "assets/miso_soup.jfif" }
+    ]
+  },
 ];
 
 

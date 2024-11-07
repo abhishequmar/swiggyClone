@@ -1,0 +1,50 @@
+<div class="container mx-auto p-4">
+  <!-- Heading Section -->
+  <h1 class="text-3xl font-semibold text-gray-800 mb-6">
+    Favourites
+  </h1>
+
+  <div class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-4 p-4">
+    <div *ngFor="let item of items" class="flex  items-center p-4 border-b border-gray-200 rounded-lg shadow-lg hover:shadow-xl transition duration-300">
+  <div class="flex items-center ">
+    <!-- Image Section -->
+    <img [src]="item.imageUrl" alt="{{ item.name }}" class="w-[40%] rounded-lg object-center p-4" />
+
+    <div class="flex flex-col flex-grow p-3">
+      <!-- Name and Price -->
+      <div class="text-lg font-semibold text-gray-800">{{ item.name }}</div>
+      <div class="text-green-600 font-medium">₹{{ item.price }}</div>
+
+      <!-- Quantity and Add to Cart Button -->
+      <div class="flex items-center justify-between mt-4">
+        
+      </div>
+    </div>
+    <button
+          (click)="increaseQuantity(item)"
+          class="bg-green-500 text-white rounded-lg px-4 py-2 text-sm font-semibold hover:bg-green-600 transition duration-200"
+        >
+          Add to Cart
+        </button>
+
+    <!-- Remove Item Button -->
+    <button
+      (click)="removeItem(item)"
+      class="ml-4 hover:text-red-600"
+      aria-label="Remove Item"
+    >
+      <!-- Reduced Icon Size -->
+      <svg width="40" height="40" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#FF0000" stroke-width="2">
+        <rect x="20" y="24" width="24" height="32" rx="2" />
+        <line x1="26" y1="28" x2="26" y2="52" />
+        <line x1="32" y1="28" x2="32" y2="52" />
+        <line x1="38" y1="28" x2="38" y2="52" />
+        <line x1="16" y1="18" x2="48" y2="18" />
+        <line x1="28" y1="14" x2="36" y2="14" />
+      </svg>
+    </button>
+  </div>
+</div>
+
+  </div>
+</div>
