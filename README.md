@@ -24,15 +24,15 @@ This project replicates Swiggy’s core UI and user interactions, focusing on a 
 - **Real-Time Price Calculation** in a service to show updated cart total as items are added or removed.
 - A separate **Cart Page** to display selected items and the total price.
 
-### 4. Static Data Management
+### Static Data Management
   - **Restaurant Details**: Basic information about each restaurant, such as name, cuisine, and location.
   - **Menu Items**: Static lists of menu items for each restaurant.
 - Favorites and cart items are managed via Angular services or localStorage to simulate session-based data storage.
 
-### 5. Authentication
+### Authentication
 - Basic **authentication system** using MockAPI to manage user sessions and simulate login/logout functionality.
 
-### 6. Order Management
+### Order Management
 - User order details are stored in MockAPI.
 
 
